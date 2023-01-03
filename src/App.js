@@ -1,6 +1,6 @@
 import './App.css';
-import { useEffect, useState } from 'react'
-import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom'
+import React, { useEffect, useState } from 'react'
+import { BrowserRouter as Router, Route, Navigate } from 'react-router-dom'
 import Gallery from './components/Gallery'
 import SearchBar from './components/SearchBar'
 import AlbumView from './components/AlbumView'
@@ -42,7 +42,7 @@ function App() {
     e.preventDefault()
     term = toTitleCase(term)
     setSearchTerm(term)
-    return (<Redirect to="/" />)
+    return (<Navigate to="/" />)
   }
 
   return (

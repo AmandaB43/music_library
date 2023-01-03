@@ -1,9 +1,9 @@
-import {useEffect, useState} from 'react'
-import {useParams, useHistory} from 'react-router-dom'
+import React, {useEffect, useState} from 'react'
+import {useParams, useNavigate} from 'react-router-dom'
 
 const AlbumView = (props) => {
     const { id } = useParams()
-    const history = useHistory()
+    const navigate = useNavigate()
     const [ albumData, setAlbumData ] = useState([])
     
     useEffect(() => {
@@ -19,7 +19,7 @@ const AlbumView = (props) => {
     const navButtons = () => {
         return (
             <div>
-                <button onClick={() => {history.push('/')}}>Home</button> | <button onClick={() => history.goBack()}>Back</button>
+                <button onClick={() => {navigate.push('/')}}>Home</button> | <button onClick={() => navigate.goBack()}>Back</button>
             </div>
         )
     }

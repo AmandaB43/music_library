@@ -1,3 +1,4 @@
+import React from 'react'
 import GalleryItem from './GalleryItem'
 
 const Gallery = (props) => {
